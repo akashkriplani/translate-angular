@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
+        // Can use useClass over here if we need to interact with language service on the server side
         useFactory: httpLoaderFactory,
         deps: [HttpClient],
       },
